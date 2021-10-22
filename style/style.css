@@ -1,0 +1,178 @@
+html, body {scroll-behavior: smooth;}
+/* yorum satiri basariyla eklenmistirs. */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #eaeaea;
+    border-left: 1px solid rgb(255, 255, 255);
+}
+::-webkit-scrollbar-thumb {background-color: #359756; border-radius: 30px;}
+::-webkit-scrollbar-thumb:hover {background-color: #48a567;}
+
+.pageloader {
+    position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	z-index: 10000;
+	background: white;    
+}
+
+*, *:before, *:after {box-sizing: border-box;}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-cont {
+  padding: 30px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 50%;
+  background: #00ba69;
+  float: left;
+  margin: 50px 100px;
+}
+
+.logo-cont::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 50%;
+  border: solid 2px #00ba69;
+  top: 0;
+  left: 0;
+  background: #00ba69;
+  animation: grow 1s 1.5s infinite ease-out;
+}
+
+.logo-cont::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  border-radius: 50%;
+  border: solid 2px #00ba69;
+  top: 0;
+  left: 0;
+  animation: grow 1s 0.8s infinite ease-out;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes grow {
+  0% {transform: scale(1); opacity: 1;}
+  100% {transform: scale(1.5); opacity: 0;}
+}
+
+.c::before  {background: #00ba69; animation: grow 1.5s infinite ease-out;}
+.c::after {animation: grow 2s 0.5s infinite ease-out;}
+.d {background: transparent;}
+
+.d::before {
+  border: 2px dotted #00ba69;
+  border-bottom: 4px solid #00ba69;
+  border-top: 4px solid #00ba69;
+  animation: spinning 1.5s infinite linear;
+}
+.d::after {animation: grow 2s 0.5s infinite ease-out;}
+.e::before {background: #00ba69; animation: grow 1s infinite ease-out;}
+.e::after {animation: grow 1s 0.5s infinite ease-out;}
+.f::before {background: #00ba69; animation: grow 1s 1.5s infinite ease-out;}
+.f::after {animation: grow 1s 0.8s infinite ease-out;}
+
+@keyframes spinning {
+  0% {transform: scale(1) rotate(0deg);}
+  100% {transform: scale(1) rotate(360deg);}
+}
+
+.card {background: transparent !important; border: 0px !important;}
+
+.card .card-title {
+    font-family: Poppins-Bold;
+    color: #359756 !important;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.card .card-text {font-family: Poppins-Regular;}
+
+button.btn.btn-success {
+    font-family: Poppins;
+    padding: 15px;
+    position: relative;
+    bottom: -10px;
+    transition: 200ms all !important;
+}
+
+#giris .card {width: 80%;}
+
+@media screen and (max-width: 992px) {#giris .row:first-child .card {padding: 75px 0px 0px 0px;}}
+
+#gorevler, #yesillendir, #yenilenebilir-enerji, #hayvanlar-bilgi {background-color: #f2f2f2 !important;}
+
+#gorevler .card {
+    background: white !important; 
+    border-radius: 15px;
+    width: 90%;
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 992px) {#ozgurluk .col-lg-6:first-child {padding: 50px 30px 0px 30px;}}
+
+#yesillendir .col-lg-6:last-child .card {
+    background: white !important; 
+    border-radius: 15px;
+    width: 90%;
+}
+
+@media screen and (max-width: 992px) {
+    #yesillendir .col-lg-6 {padding: 65px !important;}
+    #yesillendir .col-lg-6:last-child .row:first-child {padding: 0 !important;}
+}
+
+@media screen and (max-width: 550px) {
+    #yesillendir .col-lg-6 {padding: 25px !important}
+    #hayvanlar-bilgi .row {padding: 35px !important;}
+}
+
+@media screen and (max-width: 992px) {#ozgurluk .col-lg-6:last-child {padding: 0px 30px 50px 30px;}}
+
+#yenilenebilir-enerji .row:last-child .card {
+    background: white !important; 
+    border-radius: 15px;
+    width: 90%;
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 992px) {#yenilenebilir-enerji .row:first-child .card {padding: 50px 0px 50px 0px;}}
+@media screen and (max-width: 992px) {#hayvanlar .row:first-child .card {padding: 50px 0px 50px 0px;}}
+
+#hayvanlar-bilgi .card {background: white !important; border-radius: 15px;}
+@media screen and (max-width: 992px) {#hayvanlar-bilgi .col-lg-4 {margin-top: 35px;}}
+
+@media screen and (max-width: 992px) {#final .card:first-child {width: 100% !important; padding: 50px;}}
+.modal-header {border-bottom: none !important;}
+@media screen and (max-width: 768px) {#vakiflar .col-md-4 {padding: 20px;}}
